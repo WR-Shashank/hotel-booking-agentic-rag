@@ -63,7 +63,7 @@ Faithfulness assesses how accurately model outputs strictly mirror retrieved doc
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/shashankkaushik/hotel-booking-agentic-rag.git
+   git clone https://github.com/WR-Shashank/hotel-booking-agentic-rag.git
    cd hotel-booking-agentic-rag
    ```
 
@@ -86,5 +86,5 @@ Faithfulness assesses how accurately model outputs strictly mirror retrieved doc
 ## 👤 Author & Maintainer
 
 **Shashank Kaushik**
-- **GitHub**: [@shashankkaushik](https://github.com/shashankkaushik)
+- **GitHub**: [@WR-Shashank](https://github.com/WR-Shashank)
 - **License**: MIT License
