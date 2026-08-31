@@ -1,0 +1,46 @@
+# Python cache & build outputs
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ChromaDB & Local DB Cache
+.chroma/
+*.chromadb/
+chroma_db/
+
+# Streamlit config & secrets
+.streamlit/secrets.toml
+
+# Environment variables
+.env
+.env.local
+
+# IDE & OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
