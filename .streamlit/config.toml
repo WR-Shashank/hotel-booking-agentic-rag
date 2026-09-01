@@ -1,0 +1,11 @@
+[theme]
+primaryColor = "#6C5CE7"
+font = "sans serif"
+baseRadius = "medium"
+
+[server]
+# The watcher crawls every imported transformers module and floods the logs
+fileWatcherType = "none"
+
+[browser]
+gatherUsageStats = false

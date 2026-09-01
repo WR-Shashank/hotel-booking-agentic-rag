@@ -1,0 +1,8 @@
+venv/
+.git/
+__pycache__/
+embeddings.npy
+.streamlit/secrets.toml
+.env
+.devcontainer/
+.DS_Store
