@@ -123,7 +123,7 @@ with st.sidebar:
         st.rerun()
 
     st.divider()
-    st.caption(f"Built by **Shashank Kaushik** · [GitHub]({GITHUB_URL})")
+    st.caption(f"Built by **Shashank** · [GitHub]({GITHUB_URL})")
 
 
 def resolve_client():

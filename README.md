@@ -14,8 +14,7 @@ short_description: Agentic RAG stay finder across 15,000 US listings
 
 **Describe your ideal stay in plain English. StayScout turns it into real filters, searches 15,000 listings across 5 US cities and recommends only places that actually exist, with citations.**
 
-<!-- Replace with your Space URL after deploying -->
-[![Live demo](https://img.shields.io/badge/🤗%20Live%20demo-Hugging%20Face%20Spaces-yellow)](https://huggingface.co/spaces/WR-Shashank/stayscout)
+[![Live demo](https://img.shields.io/badge/🤗%20Live%20demo-Hugging%20Face%20Spaces-yellow)](https://huggingface.co/spaces/Shashank00164/stayscout)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 > “Budget private room near the French Quarter under $90” → `city = New Orleans`, `room_type = Private room`, `price ≤ $90` → 5 cited listings on a map.
@@ -141,7 +140,7 @@ GROQ_API_KEY = "your_key"
 2. In the Space **Settings → Variables and secrets**, add a secret named `GROQ_API_KEY`. Visitors then get AI mode without their own key (capped at 25 AI searches per session; after that the app switches to rule-based mode).
 3. Push this repo to the Space:
    ```bash
-   git remote add space https://huggingface.co/spaces/<your-username>/stayscout
+   git remote add space https://huggingface.co/spaces/Shashank00164/stayscout
    git push space main
    ```
 4. The first build takes a few minutes (it installs CPU torch and precomputes embeddings). After that, the app starts in seconds.
