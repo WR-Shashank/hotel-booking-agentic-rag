@@ -10,8 +10,6 @@ ENV HOME=/home/user \
     PYTHONUNBUFFERED=1
 WORKDIR /home/user/app
 
-# CPU-only torch keeps the image ~2 GB smaller than the default CUDA build
-RUN pip install --no-cache-dir --user torch --index-url https://download.pytorch.org/whl/cpu
 COPY --chown=user requirements.txt .
 RUN pip install --no-cache-dir --user -r requirements.txt
 

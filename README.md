@@ -14,7 +14,6 @@ short_description: Agentic RAG stay finder across 15,000 US listings
 
 **Describe your ideal stay in plain English. StayScout turns it into real filters, searches 15,000 listings across 5 US cities and recommends only places that actually exist, with citations.**
 
-[![Live demo](https://img.shields.io/badge/🤗%20Live%20demo-Hugging%20Face%20Spaces-yellow)](https://huggingface.co/spaces/Shashank00164/stayscout)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 > “Budget private room near the French Quarter under $90” → `city = New Orleans`, `room_type = Private room`, `price ≤ $90` → 5 cited listings on a map.
@@ -91,7 +90,7 @@ stayscout/
 | Vector database | ChromaDB (in-memory, metadata filtering) |
 | Data | Pandas, NumPy |
 | UI | Streamlit, pydeck |
-| Deployment | Docker on Hugging Face Spaces |
+| Deployment | Streamlit Community Cloud, or Docker (Hugging Face Spaces) |
 
 ---
 
@@ -134,7 +133,18 @@ GROQ_API_KEY = "your_key"
 
 ---
 
-## ☁️ Deploy to Hugging Face Spaces
+## ☁️ Deploy to Streamlit Community Cloud
+
+1. Push this repo to GitHub.
+2. Go to [share.streamlit.io](https://share.streamlit.io), sign in with GitHub and click **Create app → Deploy a public app from GitHub**.
+3. Pick the repo, branch `main` and main file `app.py`.
+4. Open **Advanced settings**: choose **Python 3.12** (required for the CPU-only torch pin) and paste your key under **Secrets**:
+   ```toml
+   GROQ_API_KEY = "your_key"
+   ```
+5. Click **Deploy**. The first start takes a few minutes while it installs packages and embeds the 15,000 listings; later starts are faster.
+
+## 🐳 Deploy with Docker (Hugging Face Spaces)
 
 1. Create a new Space at [huggingface.co/new-space](https://huggingface.co/new-space) and choose **Docker → Blank**.
 2. In the Space **Settings → Variables and secrets**, add a secret named `GROQ_API_KEY`. Visitors then get AI mode without their own key (capped at 25 AI searches per session; after that the app switches to rule-based mode).
@@ -143,7 +153,8 @@ GROQ_API_KEY = "your_key"
    git remote add space https://huggingface.co/spaces/Shashank00164/stayscout
    git push space main
    ```
-4. The first build takes a few minutes (it installs CPU torch and precomputes embeddings). After that, the app starts in seconds.
+4. The first build takes a few minutes (it installs CPU torch and precomputes embeddings).
+   Note: brand-new Hugging Face accounts may have no free CPU quota, in which case the Space stays paused. After that, the app starts in seconds.
 
 ---
 

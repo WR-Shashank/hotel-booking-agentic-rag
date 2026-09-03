@@ -1,3 +1,5 @@
+# CPU-only torch on Linux hosts (Streamlit Cloud, Docker): ~2 GB smaller than the default CUDA build
+torch @ https://download.pytorch.org/whl/cpu/torch-2.14.1%2Bcpu-cp312-cp312-manylinux_2_28_x86_64.whl ; sys_platform == "linux" and platform_machine == "x86_64" and python_version == "3.12"
 streamlit==1.66.0
 pandas==3.0.6
 numpy==2.5.4
