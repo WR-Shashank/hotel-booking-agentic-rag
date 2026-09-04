@@ -63,6 +63,7 @@ stayscout/
 ├── app.py                 # Streamlit UI: chat search, cards, map, city insights, how-it-works pages
 ├── rag.py                 # Core engine: index building, intent parsing, filtered retrieval, grounded generation
 ├── build_index.py         # Precomputes listing embeddings → embeddings.npy (fast startup)
+├── embeddings.npy         # Precomputed embeddings (committed so cloud hosts skip the CPU-heavy step)
 ├── eval.py                # Reproducible evaluation: intent accuracy, constraint satisfaction, faithfulness
 ├── airbnb_clean.csv       # 15,000 cleaned listings (3,000 each: NYC, LA, SF, Chicago, New Orleans)
 ├── requirements.txt       # Pinned Python dependencies
@@ -77,7 +78,7 @@ stayscout/
 └── README.md
 ```
 
-`embeddings.npy` is generated (git-ignored) and `.streamlit/secrets.toml` holds your local API key (git-ignored).
+Re-run `python build_index.py` whenever `airbnb_clean.csv` changes. `.streamlit/secrets.toml` holds your local API key (git-ignored).
 
 ---
 
@@ -142,7 +143,7 @@ GROQ_API_KEY = "your_key"
    ```toml
    GROQ_API_KEY = "your_key"
    ```
-5. Click **Deploy**. The first start takes a few minutes while it installs packages and embeds the 15,000 listings; later starts are faster.
+5. Click **Deploy**. The first start takes a few minutes while packages install; embeddings are loaded from `embeddings.npy`, so no heavy CPU work happens at startup.
 
 ## 🐳 Deploy with Docker (Hugging Face Spaces)
 
