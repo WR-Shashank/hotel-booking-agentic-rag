@@ -139,7 +139,7 @@ GROQ_API_KEY = "your_key"
 1. Push this repo to GitHub.
 2. Go to [share.streamlit.io](https://share.streamlit.io), sign in with GitHub and click **Create app → Deploy a public app from GitHub**.
 3. Pick the repo, branch `main` and main file `app.py`.
-4. Open **Advanced settings**: choose **Python 3.12** (required for the CPU-only torch pin) and paste your key under **Secrets**:
+4. Open **Advanced settings**: paste your key under **Secrets**:
    ```toml
    GROQ_API_KEY = "your_key"
    ```
