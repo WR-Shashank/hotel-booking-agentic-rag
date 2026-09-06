@@ -14,7 +14,10 @@ short_description: Agentic RAG stay finder across 15,000 US listings
 
 **Describe your ideal stay in plain English. StayScout turns it into real filters, searches 15,000 listings across 5 US cities and recommends only places that actually exist, with citations.**
 
+[![Live demo](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://hotel-booking-agentic-rag.streamlit.app)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+**🔗 Try it live: [hotel-booking-agentic-rag.streamlit.app](https://hotel-booking-agentic-rag.streamlit.app)**
 
 > “Budget private room near the French Quarter under $90” → `city = New Orleans`, `room_type = Private room`, `price ≤ $90` → 5 cited listings on a map.
 
