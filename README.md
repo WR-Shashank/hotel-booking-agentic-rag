@@ -157,8 +157,8 @@ GROQ_API_KEY = "your_key"
    git remote add space https://huggingface.co/spaces/Shashank00164/stayscout
    git push space main
    ```
-4. The first build takes a few minutes (it installs CPU torch and precomputes embeddings).
-   Note: brand-new Hugging Face accounts may have no free CPU quota, in which case the Space stays paused. After that, the app starts in seconds.
+4. The first build takes a few minutes (it installs CPU torch and precomputes embeddings). After that, the app starts in seconds.
+   Note: brand-new Hugging Face accounts may have no free CPU quota, in which case the Space stays paused.
 
 ---
 
